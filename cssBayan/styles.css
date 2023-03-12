@@ -58,7 +58,8 @@ li {
 
   width: 200px;
   color: aliceblue;
-  margin: 5px;
+  padding: 5px;
+  margin-bottom: 5px;
   background-color: rgb(52, 52, 54, 0.5);
 
 
@@ -131,7 +132,7 @@ input[type="radio"]:checked+label {
 
   .item-title {
     font-size: 20px;
-    /* padding-top: 10px; */
+    margin-top: 10px;
   }
 
   span {
@@ -140,8 +141,10 @@ input[type="radio"]:checked+label {
 
   .content{
     width: 300px;
+    padding: 5px;
+    margin-bottom: 5px;
   }
-  
+
   .item:hover>.label>.content {
     visibility: visible;
     height: 300px;
@@ -166,5 +169,20 @@ input[type="radio"]:checked+label {
 
   span {
     font-size: 24px;
+  }
+
+  .content {
+    width: 350px;
+    padding: 10px;
+  }
+
+  .item:hover>.label>.content {
+    visibility: visible;
+    height: 350px;
+  }
+
+  input[type="radio"]:checked~.label>.content {
+    visibility: visible;
+    height: 350px;
   }
 }
