@@ -44,12 +44,12 @@ li {
   font-size: 16px;
   font-weight:600;
   padding-top: 10px;
+  color: blue;
 }
 
 .item {
   min-width: 50px;
   border-top: 1px solid rgba(59, 58, 58, 0.5);
-  cursor: pointer;
 }
 
 .content{
@@ -74,10 +74,7 @@ img {
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: blue;
   font-weight: 800;
-
-  cursor: pointer;
 }
 
 .wrapper{
@@ -95,33 +92,51 @@ span {
   padding-top: 10px;
 }
 
+.list:hover .item-title {
+  color: black;
+}
+
 .list:hover>.item>label>.wrapper>span {
   display: block;
 }
 
-.item:hover>.label>.content {
+
+.item:hover > .label > .content {
   visibility: visible;
   height: 200px;
 }
-
 
 input[type="radio"] {
   display: none;
 }
 
 
-input[type="radio"]:checked~.label>.content {
+input[type="radio"]:checked ~ .label > .content {
   visibility: visible;
   height: 200px;
 }
 
-input[type="radio"]:checked+label>.wrapper>span {
+input[type="radio"]:checked + label > .wrapper > span {
   transform: rotate(45deg);
   transition: transform var(--animation);
 }
 
-input[type="radio"]:checked+label {
+input[type="radio"]:checked + label > .wrapper > .item-title {
   color: black;
+}
+
+/* .item:active > label > .wrapper > .item-title,
+.item:active > label > .wrapper > span {
+  color: red;
+} */
+
+input[type="radio"]:active + label > .wrapper > .item-title,
+input[type="radio"]:active + label > .wrapper > span {
+  color: blue;
+}
+
+.item:active .content {
+  opacity: 0.8;
 }
 
 /* 420px */
@@ -165,6 +180,7 @@ input[type="radio"]:checked+label {
 
   .item-title {
     font-size: 24px;
+    margin-top: 20px;
   }
 
   span {
@@ -184,5 +200,9 @@ input[type="radio"]:checked+label {
   input[type="radio"]:checked~.label>.content {
     visibility: visible;
     height: 350px;
+  }
+
+  .label {
+    cursor: pointer;
   }
 }
