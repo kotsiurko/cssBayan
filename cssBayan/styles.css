@@ -93,3 +93,32 @@ span {
   font-size: 16px;
   font-weight: 600;
 }
+
+.list:hover>.item>label>.wrapper>span {
+  display: block;
+}
+
+.item:hover>.label>.content {
+  visibility: visible;
+  height: 200px;
+}
+
+
+input[type="radio"] {
+  display: none;
+}
+
+
+input[type="radio"]:checked~.label>.content {
+  visibility: visible;
+  height: 200px;
+}
+
+input[type="radio"]:checked+label>.wrapper>span {
+  transform: rotate(45deg);
+  transition: transform var(--animation);
+}
+
+input[type="radio"]:checked+label {
+  color: black;
+}
