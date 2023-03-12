@@ -137,3 +137,18 @@ input[type="radio"]:checked+label {
     font-size: 20px;
   }
 }
+
+/* 1280px */
+@media (min-width: 1280px) {
+  .head-title {
+    font-size: 28px;
+  }
+
+  .item-title {
+    font-size: 24px;
+  }
+
+  span {
+    font-size: 24px;
+  }
+}
