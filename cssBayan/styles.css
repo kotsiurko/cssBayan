@@ -1,0 +1,95 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+body {
+  font-family: 'Kanit', sans-serif;
+  --animation: 500ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+li {
+  list-style: none;
+}
+
+.bayan{
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 10px 30px;
+  background-color: antiquewhite;
+}
+
+.head-title{
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.item-title {
+  font-size: 16px;
+  font-weight:600;
+  padding: 12px 0;
+  margin-top: 10px;
+}
+
+.item {
+  min-width: 50px;
+  border-top: 1px solid rgba(59, 58, 58, 0.5);
+  cursor: pointer;
+}
+
+.content{
+  visibility: hidden;
+  height: 0px;
+  margin-bottom: 10px;
+
+  width: 200px;
+  color: aliceblue;
+  background-color: rgb(52, 52, 54, 0.5);
+
+
+  transition: height var(--animation);
+}
+
+img {
+  width: 100%;
+}
+
+.label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: blue;
+  font-weight: 800;
+
+  cursor: pointer;
+}
+
+.wrapper{
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+span {
+  color: black;
+  display: none;
+  font-size: 16px;
+  font-weight: 600;
+}
